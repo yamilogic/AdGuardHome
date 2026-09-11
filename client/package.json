@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build-dev": "cross-env NODE_ENV=development BUILD_ENV=dev webpack --config webpack.dev.js",
-    "build-prod": "cross-env BUILD_ENV=prod webpack --config webpack.prod.js",
+    "build-dev": "node init && cross-env NODE_ENV=development BUILD_ENV=dev webpack --config webpack.dev.js",
+    "build-prod": "node init && cross-env BUILD_ENV=prod webpack --config webpack.prod.js",
     "watch": "cross-env BUILD_ENV=dev webpack --config webpack.dev.js --watch",
     "watch:hot": "cross-env BUILD_ENV=dev webpack-dev-server --config webpack.dev.js",
     "lint": "eslint --ext .ts,.tsx src",
